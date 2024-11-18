@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wisecow-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wisecow-app
+  template:
+    metadata:
+      labels:
+        app: wisecow-app
+    spec:
+      containers:
+      - name: wisecow-app
+        image: 211125646202.dkr.ecr.us-east-1.amazonaws.com/wisecow-app:latest
+        ports:
+        - containerPort: 4499  # Application is listening on port 4499 inside the container
