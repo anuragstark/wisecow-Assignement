@@ -4,5 +4,6 @@ RUN apt-get update && \
     apt-get clean
 COPY wisecow.sh /wisecow.sh
 RUN chmod +x /wisecow.sh
+CMD ["/wisecow.sh"]
 EXPOSE 4499
 CMD ["bash", "/wisecow.sh"]
