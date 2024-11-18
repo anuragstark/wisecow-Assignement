@@ -17,3 +17,10 @@ spec:
         image: 211125646202.dkr.ecr.us-east-1.amazonaws.com/wisecow-app:latest
         ports:
         - containerPort: 4499  # Application is listening on port 4499 inside the container
+        resources:
+          requests:
+            memory: "128Mi"  # Minimum memory request
+            cpu: "500m"      # Minimum CPU request
+          limits:
+            memory: "256Mi"  # Maximum memory limit
+            cpu: "1"         # Maximum CPU limit
