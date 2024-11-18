@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: wisecow
-        image: <container-registry-url>/wisecow-app:latest
+        image: 211125646202.dkr.ecr.us-east-1.amazonaws.com/wisecow-app:latest
         ports:
         - containerPort: 4499
 
